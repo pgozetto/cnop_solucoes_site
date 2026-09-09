@@ -1,0 +1,205 @@
+{
+  "name": "Sistema visual editorial corporativo vibrante",
+  "version": "1.0.0",
+  "purpose": "Base visual reutilizável para site institucional ou portfólio. Combina a paleta CNOP com estilo editorial minimalista.",
+  "source_guidance": {
+    "colors": "Referências 1 e 2: azul-marinho, dourado, laranja, rosa, magenta, roxo e branco.",
+    "style": "Referência 3: composição editorial, minimalista, em grade, com tipografia expressiva, imagens grandes e bastante respiro.",
+    "excluded": [
+      "Textos, nome, logotipo e serviços da CNOP",
+      "Textos, fotos, marcas e conteúdo da referência editorial"
+    ]
+  },
+  "tokens": {
+    "color": {
+      "ink": { "value": "#071626", "usage": "Títulos, textos principais, botões escuros e ícones." },
+      "inkSoft": { "value": "#1B2B3A", "usage": "Textos secundários e bordas de alto contraste." },
+      "gold": { "value": "#B98927", "usage": "Destaques institucionais, números, palavras-chave e detalhes." },
+      "goldLight": { "value": "#D4A849", "usage": "Hover, linhas decorativas e elementos de apoio." },
+      "orange": { "value": "#FF7A1A", "usage": "Início de degradês e chamadas pontuais." },
+      "pink": { "value": "#EF1478", "usage": "Destaques, estados ativos e chamadas visuais." },
+      "purple": { "value": "#651AA4", "usage": "Fim de degradês e acentos de contraste." },
+      "canvas": { "value": "#F9F9F6", "usage": "Fundo principal quente e claro." },
+      "surface": { "value": "#FFFFFF", "usage": "Cards, áreas de leitura e superfícies elevadas." },
+      "line": { "value": "#DEDCD5", "usage": "Bordas, divisórias e grades discretas." },
+      "muted": { "value": "#6B7075", "usage": "Legendas e textos de baixa hierarquia." }
+    },
+    "gradient": {
+      "brand": {
+        "value": "linear-gradient(135deg, #FF7A1A 0%, #EF1478 52%, #651AA4 100%)",
+        "usage": "Detalhes gráficos, fundos de CTA e elementos de destaque; usar com moderação."
+      },
+      "gold": {
+        "value": "linear-gradient(135deg, #D4A849 0%, #B98927 100%)",
+        "usage": "Selos, linhas e pequenos realces institucionais."
+      }
+    },
+    "typography": {
+      "display": {
+        "fontFamily": "Archivo Narrow, Bebas Neue, Oswald, sans-serif",
+        "weight": 700,
+        "letterSpacing": "-0.035em",
+        "lineHeight": 0.92,
+        "usage": "Títulos hero e títulos de seção em caixa alta."
+      },
+      "body": {
+        "fontFamily": "Manrope, Inter, Arial, sans-serif",
+        "weight": 400,
+        "lineHeight": 1.55,
+        "usage": "Parágrafos, menus, formulários e leitura corrente."
+      },
+      "editorial": {
+        "fontFamily": "DM Serif Display, Playfair Display, Georgia, serif",
+        "weight": 400,
+        "lineHeight": 1.05,
+        "usage": "Frases de impacto ou trechos curtos; não usar em blocos longos."
+      },
+      "scale": {
+        "hero": "clamp(3.5rem, 9vw, 8.5rem)",
+        "section": "clamp(2.4rem, 5vw, 5rem)",
+        "subheading": "clamp(1.25rem, 2vw, 1.7rem)",
+        "body": "1rem",
+        "caption": "0.78rem"
+      }
+    },
+    "spacing": {
+      "unit": "0.5rem",
+      "sectionDesktop": "clamp(5rem, 10vw, 10rem)",
+      "sectionMobile": "4rem",
+      "containerMaxWidth": "1440px",
+      "containerPadding": "clamp(1.25rem, 4vw, 5rem)",
+      "gridGap": "clamp(1rem, 2vw, 2rem)"
+    },
+    "shape": {
+      "buttonRadius": "999px",
+      "cardRadius": "1.25rem",
+      "imageRadius": "1.5rem",
+      "borderWidth": "1px"
+    },
+    "shadow": {
+      "soft": "0 18px 50px rgba(7, 22, 38, 0.10)",
+      "none": "none"
+    }
+  },
+  "style_rules": {
+    "principles": [
+      "Priorizar hierarquia forte, simplicidade e espaço em branco.",
+      "Usar uma grade editorial de 12 colunas no desktop e uma coluna no mobile.",
+      "Manter no máximo um grande destaque visual por seção.",
+      "Degradês devem ser acentos, não o fundo predominante da página.",
+      "Contrastar blocos claros com tipografia azul-marinho intensa."
+    ],
+    "avoid": [
+      "Excesso de sombras, bordas arredondadas ou cards repetidos.",
+      "Múltiplos degradês concorrendo na mesma seção.",
+      "Uso de rosa, laranja e roxo em textos longos.",
+      "Copiar textos, fotos ou composição exata de qualquer referência."
+    ]
+  },
+  "layout": {
+    "desktopGrid": {
+      "columns": 12,
+      "gutter": "clamp(1rem, 2vw, 2rem)",
+      "outerMargin": "clamp(1.25rem, 5vw, 6rem)"
+    },
+    "mobile": {
+      "columns": 1,
+      "gutter": "1rem",
+      "outerMargin": "1.25rem",
+      "minimumTapTarget": "44px"
+    },
+    "sections": [
+      {
+        "name": "header",
+        "purpose": "Marca à esquerda, navegação objetiva e CTA compacto à direita.",
+        "background": "canvas"
+      },
+      {
+        "name": "hero",
+        "purpose": "Título grande, apresentação curta, CTA e imagem ou elemento gráfico principal em composição assimétrica.",
+        "background": "canvas",
+        "recommendedColumns": "Texto: 5; mídia: 6; espaço: 1"
+      },
+      {
+        "name": "proof",
+        "purpose": "Números, logos de clientes, certificações ou diferenciais em uma faixa organizada por divisórias finas.",
+        "background": "surface"
+      },
+      {
+        "name": "about",
+        "purpose": "Título de alto impacto à esquerda e narrativa clara à direita.",
+        "background": "canvas",
+        "recommendedColumns": "Título: 6; conteúdo: 5; espaço: 1"
+      },
+      {
+        "name": "work_or_services",
+        "purpose": "Projetos, serviços ou soluções em blocos grandes com imagens e legendas discretas.",
+        "background": "canvas"
+      },
+      {
+        "name": "cta",
+        "purpose": "Chamada final com fundo azul-marinho ou degradê da marca, texto curto e ação única.",
+        "background": "ink"
+      },
+      {
+        "name": "footer",
+        "purpose": "Contato, redes, links essenciais e informações legais com hierarquia baixa.",
+        "background": "ink"
+      }
+    ]
+  },
+  "components": {
+    "button": {
+      "primary": {
+        "background": "ink",
+        "text": "surface",
+        "border": "transparent",
+        "hover": { "background": "gold", "text": "ink" }
+      },
+      "secondary": {
+        "background": "transparent",
+        "text": "ink",
+        "border": "ink",
+        "hover": { "background": "ink", "text": "surface" }
+      },
+      "accent": {
+        "background": "gradient.brand",
+        "text": "surface",
+        "border": "transparent"
+      }
+    },
+    "card": {
+      "background": "surface",
+      "border": "line",
+      "radius": "cardRadius",
+      "shadow": "none",
+      "hover": "Aplicar elevação suave apenas se o card for clicável."
+    },
+    "image": {
+      "treatment": "Fotos com luz natural ou contrastada, recorte limpo e protagonismo visual.",
+      "overlay": "Quando necessário, usar gradiente azul-marinho de 0% a 45% de opacidade para legibilidade.",
+      "radius": "imageRadius"
+    },
+    "divider": {
+      "color": "line",
+      "width": "1px",
+      "style": "solid"
+    }
+  },
+  "accessibility": {
+    "contrast": "Usar azul-marinho para textos em fundos claros. Reservar dourado, rosa, laranja e roxo para elementos grandes ou decorativos.",
+    "focus": "Todo elemento interativo deve ter foco visível em dourado ou rosa, com espessura mínima de 3px.",
+    "motion": "Respeitar prefers-reduced-motion; animações devem ser discretas e opcionais.",
+    "images": "Toda imagem relevante precisa de texto alternativo descritivo."
+  },
+  "implementation_notes": {
+    "recommendedOrder": [
+      "Definir os tokens de cor e tipografia como variáveis globais.",
+      "Criar o container e a grade antes dos componentes.",
+      "Montar as seções com bastante respiro vertical.",
+      "Adicionar elementos de cor e degradê somente após a hierarquia de conteúdo estar pronta.",
+      "Validar contraste, leitura e navegação em telas pequenas."
+    ],
+    "brandCustomization": "Substitua os conteúdos, imagens, nome, logotipo e CTAs pelos da sua marca, preservando apenas o sistema visual descrito neste arquivo."
+  }
+}
