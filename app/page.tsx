@@ -9,6 +9,7 @@ import {
   Users,
 } from 'lucide-react';
 import { Reveal } from '@/components/reveal';
+import { SiteMotion } from '@/components/site-motion';
 
 const whatsappUrl =
   'https://wa.me/5519982549216?text=Ol%C3%A1%2C%20gostaria%20de%20conhecer%20melhor%20as%20solu%C3%A7%C3%B5es%20da%20CNOP.';
@@ -59,6 +60,7 @@ const services = [
 export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden bg-canvas text-ink">
+      <SiteMotion />
       <header className="site-header sticky top-0 z-50 border-b border-line/80 bg-canvas/90 backdrop-blur-xl">
         <div className="site-container flex h-[78px] items-center justify-between gap-6">
           <a href="#inicio" className="flex items-center gap-3" aria-label="CNOP Soluções — início">
@@ -88,8 +90,8 @@ export default function Home() {
       <section id="inicio" className="relative scroll-mt-24 border-b border-line">
         <div className="brand-rail" aria-hidden="true" />
         <div className="hero-atmosphere" aria-hidden="true">
-          <span className="hero-orb hero-orb-one" />
-          <span className="hero-orb hero-orb-two" />
+          <span className="hero-orb hero-orb-one" data-parallax-speed="0.1" />
+          <span className="hero-orb hero-orb-two" data-parallax-speed="-0.08" />
         </div>
         <div className="site-container grid min-h-[calc(100svh-78px)] grid-cols-1 items-center py-20 lg:grid-cols-12 lg:py-28">
           <div className="relative z-10 lg:col-span-11 xl:col-span-10">
@@ -137,7 +139,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="empresa" className="scroll-mt-20 py-section">
+      <section id="empresa" className="relative scroll-mt-20 overflow-hidden py-section">
+        <span className="about-parallax-word" data-parallax-speed="0.07" aria-hidden="true">CNOP</span>
         <div className="site-container grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8">
           <Reveal direction="left" className="lg:col-span-6">
             <p className="eyebrow"><span /> Sobre a CNOP</p>
@@ -207,7 +210,7 @@ export default function Home() {
       <section id="contato" className="scroll-mt-20 bg-ink py-20 text-white sm:py-28">
         <div className="site-container">
           <div className="contact-panel relative overflow-hidden rounded-[1.75rem] p-7 sm:p-12 lg:p-16">
-            <div className="contact-orb" aria-hidden="true" />
+            <div className="contact-orb" data-parallax-speed="-0.05" aria-hidden="true" />
             <div className="relative z-10 grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-end">
               <Reveal direction="left" className="lg:col-span-8">
                 <p className="text-[0.95rem] font-extrabold uppercase tracking-[0.16em] text-white/90">Vamos conversar?</p>
