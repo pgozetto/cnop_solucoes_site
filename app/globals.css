@@ -243,6 +243,36 @@ a:focus-visible {
   animation: gradient-flow 5s ease-in-out infinite;
 }
 
+.typewriter-headline {
+  display: inline;
+}
+
+.typewriter-caret {
+  display: inline-block;
+  width: 0.075em;
+  height: 0.82em;
+  margin-left: 0.05em;
+  vertical-align: -0.08em;
+  background: var(--pink);
+  animation: typewriter-caret 720ms step-end infinite;
+}
+
+.typewriter-rest {
+  display: inline;
+  opacity: 0;
+  transition: opacity 380ms ease 80ms;
+}
+
+.typewriter-rest[data-visible='true'] {
+  opacity: 1;
+}
+
+@keyframes typewriter-caret {
+  50% {
+    opacity: 0;
+  }
+}
+
 .hero-atmosphere {
   position: absolute;
   inset: 0;

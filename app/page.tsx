@@ -10,6 +10,7 @@ import {
 } from 'lucide-react';
 import { Reveal } from '@/components/reveal';
 import { SiteMotion } from '@/components/site-motion';
+import { TypewriterHeadline } from '@/components/typewriter-headline';
 
 const whatsappUrl =
   'https://wa.me/5519982549216?text=Ol%C3%A1%2C%20gostaria%20de%20conhecer%20melhor%20as%20solu%C3%A7%C3%B5es%20da%20CNOP.';
@@ -97,10 +98,14 @@ export default function Home() {
           <div className="relative z-10 lg:col-span-11 xl:col-span-10">
             <Reveal delay={40}><p className="eyebrow"><span /> Consultoria, SST e Gestão de Pessoas</p></Reveal>
             <Reveal delay={130}>
-              <h1 className="display-title mt-10 max-w-[1180px]">
-                Soluções que <span className="animated-accent font-editorial font-normal normal-case">organizam,</span>{' '}
-                protegem e desenvolvem o seu negócio.
-              </h1>
+            <h1
+              className="display-title mt-10 max-w-[1180px]"
+              aria-label="Soluções que organizam, protegem e desenvolvem o seu negócio."
+            >
+              <TypewriterHeadline prefix="Soluções que " accent="organizam,">
+                {' '}protegem e desenvolvem o seu negócio.
+              </TypewriterHeadline>
+            </h1>
             </Reveal>
             <Reveal delay={240}>
               <p className="mt-12 max-w-3xl text-xl leading-[1.7] text-ink-soft sm:text-2xl">
