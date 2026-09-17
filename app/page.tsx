@@ -1,62 +1,17 @@
 import {
   ArrowDownRight,
   ArrowUpRight,
-  BriefcaseBusiness,
   Camera,
-  Check,
   MessageCircle,
-  ShieldCheck,
-  Users,
 } from 'lucide-react';
 import { Reveal } from '@/components/reveal';
 import { SiteMotion } from '@/components/site-motion';
+import { SolutionsAccordion } from '@/components/solutions-accordion';
 import { TypewriterHeadline } from '@/components/typewriter-headline';
 
 const whatsappUrl =
   'https://wa.me/5519982549216?text=Ol%C3%A1%2C%20gostaria%20de%20conhecer%20melhor%20as%20solu%C3%A7%C3%B5es%20da%20CNOP.';
 const instagramUrl = 'https://www.instagram.com/cnop.solucoessstegestao';
-
-const services = [
-  {
-    number: '01',
-    title: 'Consultoria\nEmpresarial',
-    description:
-      'Orientação estratégica para apoiar decisões, organizar processos e fortalecer a gestão da sua empresa.',
-    icon: BriefcaseBusiness,
-    items: [
-      'Análise das necessidades do negócio',
-      'Apoio à organização de processos',
-      'Soluções alinhadas à realidade da empresa',
-    ],
-    accent: 'orange',
-  },
-  {
-    number: '02',
-    title: 'Segurança\nno Trabalho',
-    description:
-      'Atuação próxima e preventiva para apoiar ambientes de trabalho mais seguros, organizados e em conformidade.',
-    icon: ShieldCheck,
-    items: [
-      'Treinamentos e integrações',
-      'MRs e Programa de Gerenciamento de Riscos — PGR',
-      'Acompanhamento de programas',
-    ],
-    accent: 'pink',
-  },
-  {
-    number: '03',
-    title: 'Gestão de\nPessoas — RH',
-    description:
-      'Soluções para desenvolver lideranças, estruturar equipes e dar mais segurança às rotinas de Recursos Humanos.',
-    icon: Users,
-    items: [
-      'Treinamento de liderança',
-      'Recrutamento e seleção',
-      'Auxílio no fechamento de folha',
-    ],
-    accent: 'purple',
-  },
-];
 
 export default function Home() {
   return (
@@ -174,41 +129,14 @@ export default function Home() {
             </Reveal>
             <Reveal direction="right" delay={140} className="lg:col-span-4 lg:pb-2">
               <p className="max-w-md text-lg leading-[1.75] text-ink-soft">
-                Três frentes complementares para apoiar a estrutura, a segurança e o desenvolvimento da sua empresa.
+                Clique em uma solução para entender como a CNOP pode apoiar a rotina da sua empresa.
               </p>
             </Reveal>
           </div>
 
-          <div className="divide-y divide-line">
-            {services.map((service, index) => {
-              const Icon = service.icon;
-              return (
-                <Reveal key={service.number} delay={index * 90}>
-                <article className="service-row group grid grid-cols-1 gap-10 py-14 lg:grid-cols-12 lg:items-start lg:py-20">
-                  <div className="flex items-center gap-5 lg:col-span-2">
-                    <span className={`service-icon service-icon-${service.accent}`}><Icon size={26} strokeWidth={1.7} aria-hidden="true" /></span>
-                    <span className="text-[0.95rem] font-extrabold tracking-[0.15em] text-ink-soft lg:hidden">{service.number}</span>
-                  </div>
-                  <div className="lg:col-span-4">
-                    <span className="hidden text-[0.95rem] font-extrabold tracking-[0.15em] text-ink-soft lg:block">{service.number}</span>
-                    <h3 className="mt-0 whitespace-pre-line text-[clamp(2.25rem,4.2vw,4.35rem)] font-extrabold uppercase leading-[1.06] tracking-[-0.035em] lg:mt-7">{service.title}</h3>
-                  </div>
-                  <div className="lg:col-span-5 lg:col-start-8">
-                    <p className="text-xl leading-[1.7] text-ink-soft">{service.description}</p>
-                    <ul className="mt-9 space-y-4">
-                      {service.items.map((item) => (
-                        <li key={item} className="flex items-start gap-3 text-lg leading-[1.65] text-ink-soft">
-                          <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-canvas text-ink"><Check size={13} strokeWidth={2.5} aria-hidden="true" /></span>
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </article>
-                </Reveal>
-              );
-            })}
-          </div>
+          <Reveal delay={120}>
+            <SolutionsAccordion whatsappNumber="5519982549216" />
+          </Reveal>
         </div>
       </section>
 
