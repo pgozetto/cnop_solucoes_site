@@ -1,15 +1,19 @@
 'use client';
 
 import { useState } from 'react';
-import {
-  BriefcaseBusiness,
-  ChevronDown,
-  FileCheck2,
-  LaptopMinimal,
-  MessageCircle,
-  ShieldCheck,
-  type LucideIcon,
-} from 'lucide-react';
+
+type GlyphName = 'shield' | 'briefcase' | 'file' | 'laptop';
+
+function CategoryGlyph({ name }: { name: GlyphName }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      {name === 'shield' && <><path d="M12 3 19 6v5c0 4.5-3 8.2-7 10-4-1.8-7-5.5-7-10V6l7-3Z" /><path d="m9 12 2 2 4-4" /></>}
+      {name === 'briefcase' && <><rect x="4" y="7" width="16" height="12" rx="1.5" /><path d="M9 7V5h6v2M4 11h16M10 11v2h4v-2" /></>}
+      {name === 'file' && <><path d="M6 3h8l4 4v14H6z" /><path d="M14 3v5h4M9 13h6M9 17h6" /></>}
+      {name === 'laptop' && <><rect x="4" y="5" width="16" height="11" rx="1" /><path d="M2 19h20M8 19h8" /></>}
+    </svg>
+  );
+}
 
 type SolutionItem = {
   title: string;
@@ -21,7 +25,7 @@ type SolutionCategory = {
   title: string;
   description: string;
   accent: 'orange' | 'pink' | 'purple' | 'gold';
-  icon: LucideIcon;
+  icon: GlyphName;
   items: SolutionItem[];
 };
 
@@ -31,7 +35,7 @@ const solutionCategories: SolutionCategory[] = [
     title: 'Segurança do Trabalho e SST',
     description: 'Estruturação de rotinas preventivas, documentação e suporte à conformidade em segurança e saúde no trabalho.',
     accent: 'pink',
-    icon: ShieldCheck,
+    icon: 'shield',
     items: [
       { title: 'PGR / GRO', description: 'Organização do gerenciamento de riscos ocupacionais, com identificação de perigos, definição de medidas e acompanhamento das ações.' },
       { title: 'AEP e gestão de riscos', description: 'Avaliação ergonômica preliminar e apoio à gestão dos riscos que podem afetar a saúde, a segurança e a rotina da equipe.' },
@@ -52,7 +56,7 @@ const solutionCategories: SolutionCategory[] = [
     title: 'Gestão de Pessoas e RH',
     description: 'Apoio prático para estruturar pessoas, lideranças e rotinas de Recursos Humanos com mais clareza e consistência.',
     accent: 'purple',
-    icon: BriefcaseBusiness,
+    icon: 'briefcase',
     items: [
       { title: 'Terceirização e suporte de RH', description: 'Apoio especializado às demandas de RH, com suporte adaptado à estrutura e ao momento da empresa.' },
       { title: 'Recrutamento e seleção', description: 'Condução de processos para atrair, avaliar e selecionar profissionais alinhados à vaga e à cultura da organização.' },
@@ -70,7 +74,7 @@ const solutionCategories: SolutionCategory[] = [
     title: 'Departamento Pessoal e Processos',
     description: 'Rotinas organizadas para dar mais previsibilidade às informações, documentos e controles do dia a dia.',
     accent: 'gold',
-    icon: FileCheck2,
+    icon: 'file',
     items: [
       { title: 'Organização de rotinas', description: 'Mapeamento e estruturação das atividades recorrentes para tornar os processos mais claros e previsíveis.' },
       { title: 'Controle de ponto', description: 'Apoio ao acompanhamento dos registros de jornada, com atenção à consistência das informações.' },
@@ -86,7 +90,7 @@ const solutionCategories: SolutionCategory[] = [
     title: 'Soluções Digitais',
     description: 'Ferramentas e fluxos digitais para centralizar informações e tornar a gestão mais simples de acompanhar.',
     accent: 'orange',
-    icon: LaptopMinimal,
+    icon: 'laptop',
     items: [
       { title: 'Gestão digital de EPI', description: 'Organização eletrônica dos registros de entrega, controle e acompanhamento de equipamentos de proteção.' },
       { title: 'Assinaturas digitais', description: 'Apoio à adoção de assinaturas digitais para dar mais agilidade e rastreabilidade aos documentos.' },
@@ -112,8 +116,6 @@ export function SolutionsAccordion({ whatsappNumber }: SolutionsAccordionProps) 
   return (
     <div className="solutions-directory">
       {solutionCategories.map((category) => {
-        const CategoryIcon = category.icon;
-
         return (
           <section
             key={category.id}
@@ -123,7 +125,7 @@ export function SolutionsAccordion({ whatsappNumber }: SolutionsAccordionProps) 
           >
             <div className="solutions-category-heading">
               <span className="solutions-category-icon" aria-hidden="true">
-                <CategoryIcon size={25} strokeWidth={1.8} />
+                <CategoryGlyph name={category.icon} />
               </span>
               <div>
                 <p className="eyebrow"><span /> Área de atuação</p>
@@ -151,7 +153,7 @@ export function SolutionsAccordion({ whatsappNumber }: SolutionsAccordionProps) 
                         <small>{isOpen ? 'Fechar detalhes' : 'Ver detalhes'}</small>
                       </span>
                       <span className="solution-indicator" aria-hidden="true">
-                        <ChevronDown size={22} strokeWidth={2} />
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6" /></svg>
                       </span>
                     </button>
 
@@ -164,7 +166,7 @@ export function SolutionsAccordion({ whatsappNumber }: SolutionsAccordionProps) 
                           target="_blank"
                           rel="noreferrer"
                         >
-                          <MessageCircle size={18} aria-hidden="true" />
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4.2A8 8 0 1 1 20 11.5Z" /><path d="M8.5 9.5c.3 2 1.4 3.4 3.3 4.3l1.3-1.2 1.7.8c.2.1.3.3.2.5-.2.7-.8 1.2-1.6 1.1-3.7-.5-6.4-3.2-6.9-6.9-.1-.8.4-1.4 1.1-1.6.2-.1.4 0 .5.2l.8 1.7-1.2 1.1Z" /></svg>
                           Falar sobre esta solução
                         </a>
                       </div>
