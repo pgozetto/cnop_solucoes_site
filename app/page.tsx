@@ -107,7 +107,7 @@ export default function Home() {
             <h2 className="section-title mt-6">Diferentes desafios.<br />Uma visão <span className="font-editorial font-normal normal-case text-gold">completa.</span></h2>
           </Reveal>
           <Reveal direction="scale" delay={100} className="lg:col-span-3 lg:col-start-6">
-            <figure className="about-portrait">
+            <figure className="about-portrait about-portrait-compact">
               <img
                 src="/cnop-consultora.png"
                 alt="Profissional em ambiente corporativo"

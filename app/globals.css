@@ -338,6 +338,12 @@ a:focus-visible {
   box-shadow: 0 24px 54px rgba(7, 22, 38, 0.14);
 }
 
+.about-portrait-compact {
+  width: min(100%, 175px);
+  justify-self: center;
+  border-radius: 1.25rem;
+}
+
 .about-portrait::after {
   position: absolute;
   inset: 0;
@@ -685,6 +691,7 @@ a:focus-visible {
   .solutions-category-heading { gap: 1rem; }
   .solutions-category-icon { width: 2.8rem; height: 2.8rem; border-radius: 0.85rem; }
   .about-portrait { aspect-ratio: 5 / 6; border-radius: 1.25rem; }
+  .about-portrait-compact { width: 150px; justify-self: center; }
 }
 
 @media (prefers-reduced-motion: reduce) {
