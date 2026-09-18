@@ -101,12 +101,23 @@ export default function Home() {
 
       <section id="empresa" className="relative scroll-mt-20 overflow-hidden py-section">
         <span className="about-parallax-word" data-parallax-speed="0.07" aria-hidden="true">CNOP</span>
-        <div className="site-container grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8">
-          <Reveal direction="left" className="lg:col-span-6">
+        <div className="site-container grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-6">
+          <Reveal direction="left" className="lg:col-span-5">
             <p className="eyebrow"><span /> Sobre a CNOP</p>
             <h2 className="section-title mt-6">Diferentes desafios.<br />Uma visão <span className="font-editorial font-normal normal-case text-gold">completa.</span></h2>
           </Reveal>
-          <Reveal direction="right" delay={140} className="lg:col-span-5 lg:col-start-8 lg:pt-12">
+          <Reveal direction="scale" delay={100} className="lg:col-span-3 lg:col-start-6">
+            <figure className="about-portrait">
+              <img
+                src="/cnop-consultora.png"
+                alt="Profissional em ambiente corporativo"
+                className="h-full w-full object-cover"
+                loading="lazy"
+              />
+              <figcaption>CNOP Soluções</figcaption>
+            </figure>
+          </Reveal>
+          <Reveal direction="right" delay={180} className="lg:col-span-4 lg:col-start-9 lg:pt-12">
             <p className="text-2xl leading-[1.65] text-ink-soft">
               A CNOP Soluções apoia empresas em áreas que influenciam diretamente a qualidade da gestão: processos, segurança e pessoas.
             </p>
