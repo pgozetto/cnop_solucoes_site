@@ -280,31 +280,26 @@ a:focus-visible {
   pointer-events: none;
 }
 
-.hero-brand-watermark {
-  position: absolute;
-  top: 44%;
-  right: clamp(1.25rem, 6vw, 6rem);
-  z-index: 0;
-  display: flex;
+.hero-signature {
+  display: inline-flex;
   align-items: center;
   gap: 0.7rem;
-  color: var(--ink);
-  opacity: 0.16;
-  pointer-events: none;
-  transform: rotate(-4deg);
+  margin-top: 1.7rem;
+  color: var(--ink-soft);
+  opacity: 0.78;
 }
 
-.hero-brand-watermark img {
-  width: clamp(3.2rem, 6vw, 5rem);
-  height: clamp(3.2rem, 6vw, 5rem);
+.hero-signature img {
+  width: 2.8rem;
+  height: 2.8rem;
   object-fit: contain;
 }
 
-.hero-brand-watermark span {
-  font-size: clamp(0.64rem, 1vw, 0.82rem);
+.hero-signature span {
+  font-size: 0.68rem;
   font-weight: 900;
-  line-height: 1.1;
-  letter-spacing: 0.14em;
+  line-height: 1.05;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
@@ -368,7 +363,7 @@ a:focus-visible {
 
 .about-portrait-compact {
   --parallax-y: 0px;
-  width: clamp(210px, 18vw, 280px);
+  width: clamp(235px, 20vw, 300px);
   max-width: 100%;
   margin-inline: auto;
   justify-self: center;
@@ -724,13 +719,14 @@ a:focus-visible {
   .section-title { line-height: 1.08; }
   .py-section { padding-block: 4.5rem; }
   .hero-orb { opacity: 0.09; filter: blur(28px); }
-  .hero-brand-watermark { top: 30%; right: 1rem; opacity: 0.1; transform: scale(0.82) rotate(-4deg); transform-origin: right center; }
+  .hero-signature { margin-top: 1.4rem; }
+  .hero-signature img { width: 2.45rem; height: 2.45rem; }
   .reveal-left, .reveal-right { --reveal-x: 0px; --reveal-y: 28px; }
   .solutions-category { border-radius: 1.25rem; }
   .solutions-category-heading { gap: 1rem; }
   .solutions-category-icon { width: 2.8rem; height: 2.8rem; border-radius: 0.85rem; }
   .about-portrait { aspect-ratio: 5 / 6; border-radius: 1.25rem; }
-  .about-portrait-compact { width: min(205px, 70vw); justify-self: center; }
+  .about-portrait-compact { width: min(230px, 76vw); justify-self: center; }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -49,10 +49,6 @@ export default function Home() {
           <span className="hero-orb hero-orb-one" data-parallax-speed="0.1" />
           <span className="hero-orb hero-orb-two" data-parallax-speed="-0.08" />
         </div>
-        <div className="hero-brand-watermark" aria-hidden="true">
-          <img src="/cnop-logo.png" alt="" />
-          <span>CNOP<br />Soluções</span>
-        </div>
         <div className="site-container grid min-h-[calc(100svh-78px)] grid-cols-1 items-center py-20 lg:grid-cols-12 lg:py-28">
           <div className="relative z-10 lg:col-span-11 xl:col-span-10">
             <Reveal delay={40}><p className="eyebrow"><span /> Consultoria, SST e Gestão de Pessoas</p></Reveal>
@@ -66,6 +62,10 @@ export default function Home() {
               </TypewriterHeadline>
             </h1>
             </Reveal>
+            <div className="hero-signature" aria-label="CNOP Soluções">
+              <img src="/cnop-logo.png" alt="" />
+              <span>CNOP<br />Soluções</span>
+            </div>
             <Reveal delay={240}>
               <p className="mt-12 max-w-3xl text-xl leading-[1.7] text-ink-soft sm:text-2xl">
                 A CNOP integra conhecimento empresarial, segurança no trabalho e gestão de pessoas para apoiar empresas que buscam uma operação mais sólida e bem conduzida.
