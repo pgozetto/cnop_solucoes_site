@@ -280,27 +280,10 @@ a:focus-visible {
   pointer-events: none;
 }
 
-.hero-signature {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.7rem;
-  margin-top: 1.7rem;
-  color: var(--ink-soft);
-  opacity: 0.78;
-}
-
-.hero-signature img {
-  width: 2.8rem;
-  height: 2.8rem;
-  object-fit: contain;
-}
-
-.hero-signature span {
-  font-size: 0.68rem;
-  font-weight: 900;
-  line-height: 1.05;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+.header-logo {
+  display: block;
+  width: clamp(9.5rem, 13vw, 12rem);
+  height: auto;
 }
 
 .hero-orb {
@@ -719,8 +702,7 @@ a:focus-visible {
   .section-title { line-height: 1.08; }
   .py-section { padding-block: 4.5rem; }
   .hero-orb { opacity: 0.09; filter: blur(28px); }
-  .hero-signature { margin-top: 1.4rem; }
-  .hero-signature img { width: 2.45rem; height: 2.45rem; }
+  .header-logo { width: 9rem; }
   .reveal-left, .reveal-right { --reveal-x: 0px; --reveal-y: 28px; }
   .solutions-category { border-radius: 1.25rem; }
   .solutions-category-heading { gap: 1rem; }

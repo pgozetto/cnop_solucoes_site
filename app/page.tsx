@@ -20,13 +20,7 @@ export default function Home() {
       <header className="site-header sticky top-0 z-50 border-b border-line/80 bg-canvas/90 backdrop-blur-xl">
         <div className="site-container flex h-[78px] items-center justify-between gap-6">
           <a href="#inicio" className="flex items-center gap-3" aria-label="CNOP Soluções — início">
-            <span className="brand-mark relative h-12 w-12 overflow-hidden rounded-xl border border-line bg-white p-1.5">
-              <img src="/cnop-logo.png" alt="Logo da CNOP Soluções" className="h-full w-full object-contain p-1" />
-            </span>
-            <span className="leading-none">
-              <strong className="block text-[1.05rem] font-extrabold tracking-[-0.03em]">CNOP</strong>
-              <span className="mt-1 block text-[0.8rem] font-bold uppercase tracking-[0.2em] text-ink-soft">Soluções</span>
-            </span>
+            <img src="/cnop-logo-horizontal.svg" alt="CNOP Soluções" className="header-logo" />
           </a>
 
           <nav className="hidden items-center gap-9 text-[0.95rem] font-semibold lg:flex" aria-label="Navegação principal">
@@ -62,10 +56,6 @@ export default function Home() {
               </TypewriterHeadline>
             </h1>
             </Reveal>
-            <div className="hero-signature" aria-label="CNOP Soluções">
-              <img src="/cnop-logo.png" alt="" />
-              <span>CNOP<br />Soluções</span>
-            </div>
             <Reveal delay={240}>
               <p className="mt-12 max-w-3xl text-xl leading-[1.7] text-ink-soft sm:text-2xl">
                 A CNOP integra conhecimento empresarial, segurança no trabalho e gestão de pessoas para apoiar empresas que buscam uma operação mais sólida e bem conduzida.
