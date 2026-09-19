@@ -49,6 +49,10 @@ export default function Home() {
           <span className="hero-orb hero-orb-one" data-parallax-speed="0.1" />
           <span className="hero-orb hero-orb-two" data-parallax-speed="-0.08" />
         </div>
+        <div className="hero-brand-watermark" aria-hidden="true">
+          <img src="/cnop-logo.png" alt="" />
+          <span>CNOP<br />Soluções</span>
+        </div>
         <div className="site-container grid min-h-[calc(100svh-78px)] grid-cols-1 items-center py-20 lg:grid-cols-12 lg:py-28">
           <div className="relative z-10 lg:col-span-11 xl:col-span-10">
             <Reveal delay={40}><p className="eyebrow"><span /> Consultoria, SST e Gestão de Pessoas</p></Reveal>
@@ -114,11 +118,12 @@ export default function Home() {
                 className="h-full w-full object-cover"
                 loading="lazy"
               />
+              <figcaption>Camila Perboni</figcaption>
             </figure>
           </Reveal>
           <Reveal direction="right" delay={180} className="lg:col-span-4 lg:col-start-9 lg:pt-12">
-            <p className="text-2xl leading-[1.65] text-ink-soft">
-              A CNOP Soluções apoia empresas em áreas que influenciam diretamente a qualidade da gestão: processos, segurança e pessoas.
+            <p className="text-xl leading-[1.7] text-ink-soft sm:text-2xl sm:leading-[1.65]">
+              Camila Novaes de Oliveira Perboni é formada em Segurança do Trabalho, com ampla experiência em Gestão de Pessoas e Riscos Psicossociais. À frente da CNOP, une conhecimento técnico e experiência prática para oferecer soluções integradas em pessoas, segurança e processos, com atendimento próximo e personalizado para cada empresa.
             </p>
             <p className="mt-8 text-lg leading-[1.8] text-ink-soft">
               Cada atendimento parte das necessidades reais da organização. O objetivo é oferecer orientação clara e suporte aplicável à rotina, conectando as demandas empresariais a soluções consistentes.

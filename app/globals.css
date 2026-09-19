@@ -180,7 +180,7 @@ a:focus-visible {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  font-size: 0.9rem;
+  font-size: 0.78rem;
   font-weight: 800;
   line-height: 1.5;
   letter-spacing: 0.14em;
@@ -280,6 +280,34 @@ a:focus-visible {
   pointer-events: none;
 }
 
+.hero-brand-watermark {
+  position: absolute;
+  top: 44%;
+  right: clamp(1.25rem, 6vw, 6rem);
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: var(--ink);
+  opacity: 0.16;
+  pointer-events: none;
+  transform: rotate(-4deg);
+}
+
+.hero-brand-watermark img {
+  width: clamp(3.2rem, 6vw, 5rem);
+  height: clamp(3.2rem, 6vw, 5rem);
+  object-fit: contain;
+}
+
+.hero-brand-watermark span {
+  font-size: clamp(0.64rem, 1vw, 0.82rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
 .hero-orb {
   --parallax-y: 0px;
   position: absolute;
@@ -340,7 +368,7 @@ a:focus-visible {
 
 .about-portrait-compact {
   --parallax-y: 0px;
-  width: clamp(180px, 15vw, 220px);
+  width: clamp(210px, 18vw, 280px);
   max-width: 100%;
   margin-inline: auto;
   justify-self: center;
@@ -364,6 +392,23 @@ a:focus-visible {
 }
 
 .about-portrait:hover img { transform: scale(1.035); }
+
+.about-portrait figcaption {
+  position: absolute;
+  right: 0.8rem;
+  bottom: 0.75rem;
+  z-index: 2;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 999px;
+  padding: 0.35rem 0.6rem;
+  color: white;
+  background: rgba(7, 22, 38, 0.44);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+}
 
 .proof-item {
   position: relative;
@@ -679,12 +724,13 @@ a:focus-visible {
   .section-title { line-height: 1.08; }
   .py-section { padding-block: 4.5rem; }
   .hero-orb { opacity: 0.09; filter: blur(28px); }
+  .hero-brand-watermark { top: 30%; right: 1rem; opacity: 0.1; transform: scale(0.82) rotate(-4deg); transform-origin: right center; }
   .reveal-left, .reveal-right { --reveal-x: 0px; --reveal-y: 28px; }
   .solutions-category { border-radius: 1.25rem; }
   .solutions-category-heading { gap: 1rem; }
   .solutions-category-icon { width: 2.8rem; height: 2.8rem; border-radius: 0.85rem; }
   .about-portrait { aspect-ratio: 5 / 6; border-radius: 1.25rem; }
-  .about-portrait-compact { width: min(170px, 62vw); justify-self: center; }
+  .about-portrait-compact { width: min(205px, 70vw); justify-self: center; }
 }
 
 @media (prefers-reduced-motion: reduce) {
