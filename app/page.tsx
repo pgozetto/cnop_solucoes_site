@@ -71,6 +71,15 @@ export default function Home() {
                 </a>
               </div>
             </Reveal>
+            <Reveal delay={430}>
+              <div className="hero-logo-wrap" data-parallax-speed="0.035">
+                <img
+                  src="/cnop-logo-hero.jpeg"
+                  alt="Logo CNOP Soluções"
+                  className="hero-logo-image"
+                />
+              </div>
+            </Reveal>
           </div>
 
         </div>
