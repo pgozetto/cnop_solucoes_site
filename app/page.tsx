@@ -20,7 +20,7 @@ export default function Home() {
       <header className="site-header sticky top-0 z-50 border-b border-line/80 bg-canvas/90 backdrop-blur-xl">
         <div className="site-container flex h-[78px] items-center justify-between gap-6">
           <a href="#inicio" className="flex items-center gap-3" aria-label="CNOP Soluções — início">
-            <img src="/cnop-logo-horizontal.svg" alt="CNOP Soluções" className="header-logo" />
+            <img src="/cnop-logo-hero.jpeg" alt="CNOP Soluções" className="header-logo" />
           </a>
 
           <nav className="hidden items-center gap-9 text-[0.95rem] font-semibold lg:flex" aria-label="Navegação principal">

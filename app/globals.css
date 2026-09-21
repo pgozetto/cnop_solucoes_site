@@ -283,7 +283,11 @@ a:focus-visible {
 .header-logo {
   display: block;
   width: clamp(9.5rem, 13vw, 12rem);
-  height: auto;
+  height: 3.15rem;
+  object-fit: cover;
+  object-position: center 49%;
+  border-radius: 0.45rem;
+  mix-blend-mode: multiply;
 }
 
 .hero-logo-wrap {
@@ -735,7 +739,7 @@ a:focus-visible {
   .section-title { line-height: 1.08; }
   .py-section { padding-block: 4.5rem; }
   .hero-orb { opacity: 0.09; filter: blur(28px); }
-  .header-logo { width: 9rem; }
+  .header-logo { width: 9rem; height: 2.9rem; }
   .hero-logo-wrap { margin-top: 2.25rem; }
   .hero-logo-image { width: min(92vw, 440px); border-radius: 0.9rem; }
   .reveal-left, .reveal-right { --reveal-x: 0px; --reveal-y: 28px; }
