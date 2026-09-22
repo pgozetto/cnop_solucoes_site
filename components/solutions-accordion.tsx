@@ -93,7 +93,6 @@ const solutionCategories: SolutionCategory[] = [
     icon: 'laptop',
     items: [
       { title: 'Gestão digital de EPI', description: 'Organização eletrônica dos registros de entrega, controle e acompanhamento de equipamentos de proteção.' },
-      { title: 'Assinaturas digitais', description: 'Apoio à adoção de assinaturas digitais para dar mais agilidade e rastreabilidade aos documentos.' },
       { title: 'Controle de documentos', description: 'Estruturação de documentos digitais para facilitar acesso, atualização e acompanhamento de pendências.' },
       { title: 'Gestão de ponto', description: 'Apoio no uso de recursos digitais para acompanhar registros de jornada e informações de frequência.' },
       { title: 'Organização de informações e indicadores', description: 'Centralização de dados e indicadores para apoiar análises mais claras e decisões do dia a dia.' },
