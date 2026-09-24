@@ -46,6 +46,10 @@ npm run build
 npm run start
 ```
 
+## Publicação na Vercel
+
+O arquivo `vercel.json` já define o projeto como um build baseado em Vite/Vinext, usa `npm run build` e publica o conteúdo gerado em `dist/client`. Ao importar este repositório na Vercel, mantenha o diretório raiz do projeto e deixe essas configurações serem detectadas automaticamente.
+
 ## Contato da CNOP
 
 - WhatsApp: [(19) 98254-9216](https://wa.me/5519982549216)
