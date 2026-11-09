@@ -127,7 +127,6 @@ export function SolutionsAccordion({ whatsappNumber }: SolutionsAccordionProps) 
                 <CategoryGlyph name={category.icon} />
               </span>
               <div>
-                <p className="eyebrow"><span /> Área de atuação</p>
                 <h3 id={`${category.id}-title`} className="solutions-category-title">{category.title}</h3>
                 <p className="solutions-category-description">{category.description}</p>
               </div>
