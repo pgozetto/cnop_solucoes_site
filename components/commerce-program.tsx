@@ -97,7 +97,7 @@ export function CommerceProgram() {
     'https://wa.me/5519982549216?text=Ol%C3%A1%2C%20quero%20conhecer%20o%20Programa%20Especial%20de%20Apoio%20ao%20Com%C3%A9rcio%20da%20CNOP.';
 
   return (
-    <section id="comercio" className="scroll-mt-20 border-t border-line bg-canvas py-section">
+    <section id="comercio" className="scroll-mt-20 bg-canvas py-section">
       <div className="site-container">
         <div className="grid grid-cols-1 gap-8 border-b border-line pb-12 lg:grid-cols-12 lg:items-end">
           <Reveal direction="left" className="lg:col-span-8">

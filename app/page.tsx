@@ -113,7 +113,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="escala" className="relative scroll-mt-24 border-b border-line">
+      <CommerceProgram />
+
+      <section id="escala" className="relative scroll-mt-24 border-y border-line">
         <div className="site-container py-16 lg:py-24">
           <div className="relative z-10 grid grid-cols-1 items-center gap-12 lg:grid-cols-12">
             <div className="lg:col-span-8">
@@ -242,8 +244,6 @@ export default function Home() {
           </Reveal>
         </div>
       </section>
-
-      <CommerceProgram />
 
       <section id="contato" className="scroll-mt-20 bg-ink py-20 text-white sm:py-28">
         <div className="site-container">
